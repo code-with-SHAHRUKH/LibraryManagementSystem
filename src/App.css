@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  
+}
+/* src/App.css */
+.rtl {
+  direction: rtl;
+  text-align: right;
+
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+  margin-right: 10px; /* For LTR */
+  margin-left: 0;
+}
+  
+}
+
+
+[dir="ltr"] .ltr {
+  margin-right: 0; /* For RTL */
+  margin-left: 10px;
+}
