@@ -1,6 +1,3 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux';
 import { store } from './ReduxStore/Store.js';
@@ -16,14 +13,16 @@ import i18n from './i18n.js';
 import DashBoard from './components/DashBoard/DashBoard.jsx'
 import BookManagement from './components/BookManagement/BookManagement.jsx'
 import UserManagement from './components/UserManagement/UserManagement.jsx'
-
+import PrintLabel from './components/QrCodes/PrintLabel.jsx';
+import AddUser from './components/UserManagement/AddUser.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
       <Route path='' element={<DashBoard />} />
       <Route path='bookManagement' element={<BookManagement />} />
+      <Route path='addNewUser' element={<AddUser />} />
       <Route path='userManagement' element={<UserManagement />} />
-     
+      <Route path='printLabel' element={<PrintLabel/>} />
     </Route>
   )
 )
